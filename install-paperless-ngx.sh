@@ -42,11 +42,6 @@ ask_docker_folder() {
 	done
 }
 
-if [[ $(id -u) == "0" ]] ; then
-	echo "Do not run this script as root."
-	exit 1
-fi
-
 if ! command -v wget &> /dev/null ; then
 	echo "wget executable not found. Is wget installed?"
 	exit 1
